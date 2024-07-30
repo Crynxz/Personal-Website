@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <title>JOÃO SOUSA WEBSITE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="photography.css">
+  <link rel="stylesheet" type="text/css" href="animation.css">
+  <link rel="stylesheet" type="text/css"href="navbar.css">
+
+  <style>
+
+    #overlay {
+      position: fixed;
+      display: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.832);
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    #overlayContent {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .nav-arrow {
+      position: absolute;
+      top: 50%;
+      width: 50px;
+      height: 50px;
+      background-color: rgba(255, 255, 255, 0.7);
+      color: black;
+      text-align: center;
+      line-height: 50px;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 3;
+    }
+
+    #leftArrow {
+      left: 10px;
+      transform: translateY(-50%);
+    }
+
+    #rightArrow {
+      right: 10px;
+      transform: translateY(-50%);
+    }
+  </style>
+</head>
+<body style="background-color: rgba(0, 0, 0, 0.535);">
+
+<main>
+  <div class = "container" >
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="index.html"  class="logo-link">
+        <span class="fs-2">JS</span>
+      </a>
+ 
+
+      <ul class="nav nav-pills  ms-auto" > 
+      
+        <li class ="nav-item">
+          <a href="Animation.html" class="nav-link">Animation</a> 
+        </li>
+
+        <li class ="nav-item">
+          <a href="Photography.html" class="nav-link">Photography</a> 
+        </li>
+
+        <li class ="nav-item">
+          <a href="Programming.html" class="nav-link">Programming</a> 
+        </li>
+
+        <li class ="nav-item">
+          <a href="illustration.html" class="nav-link">Illustration</a> 
+        </li>
+
+        <li class ="nav-item">
+          <a href="Video.html" class="nav-link">Directing/Acting</a> 
+        </li>
+
+        <li class ="nav-item">
+          <a href="WRITING.html" class="nav-link">Writing</a> 
+        </li>
+      </ul>
+    </header>
+  </div>
+
+  <div id="overlay" onclick="off()">
+    <span id="leftArrow" class="nav-arrow" onclick="prevImage(event)">&#9664;</span>
+    <img id="overlayImage" src="" alt="Overlay Image" class="overlay-content">
+    <span id="rightArrow" class="nav-arrow" onclick="nextImage(event)">&#9654;</span>
+  </div>
+
+  <div class="photography-page">
+    <div class="gallery-section row">
+
+      <div class="col-md-4">
+        <div class="card mx-auto active" data-card-index="0" style="width: 40rem;">
+          <div class="image click-to-view" data-content="Click to view photos" style="cursor: pointer;" onclick="showImage(event)">
+            <img src="BREMEN/IMG-20230409-WA0084.jpg" class="card-img-top" alt="Musicians of Bremen" style="object-fit: cover; height: 25rem;" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-title">Musicians of Bremen</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h1>Musicians of Bremen</h1>
+        <p class="lazercattext"> During my Degree in the subject of Design of Communication, we were challenged to illustrate, in any way we wanted, one of the tales from the iconic Grimm brothers and then make a book out of it, with the illustrations accompanying the text. So, through the art of photography, I decided to illustrate the old tale  "Town Musicians of Bremen" through the use of human models disguised as the animals depicted in the story. </p>
+        <p class="lazercattext"> In a twisted artistic choice, I home made clay masks of each animal, that then mixed with makeup and ligatures it made for this creepy original look I wanted to go for.</p>
+        <a class="behance-link" href="https://www.behance.net/gallery/171926449/Bremen-Musicians"> Click to see more (Behance page) </a>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mx-auto" data-card-index="1" style="width: 40rem;">
+          <div class="image click-to-view" data-content="Click to view photos" style="cursor: pointer;" onclick="showImage(event)">
+            <img src="wesleyI/DSCF2708-1.jpg" class="card-img-top" alt="Wesley I" style="object-fit: cover; height: 25rem;" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-title">Wesley I</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h1>Wesley I</h1>
+        <p class="lazercattext"> One of my very first photoshoots. </p>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mx-auto" data-card-index="2" style="width: 40rem;">
+          <div class="image click-to-view" data-content="Click to view photos" style="cursor: pointer;" onclick="showImage(event)">
+            <img src="wesleyHaidee/434.jpg" class="card-img-top" alt="Wesley&Haidee" style="object-fit: cover; height: 25rem;" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-title">Wesley & Haidee</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h1>Wesley & Haidee</h1>
+        <p class="lazercattext"> A summer photoshoot in the beach of Vila do Conde, with Haidee and Wesley. </p>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mx-auto" data-card-index="3" style="width: 40rem;">
+          <div class="image click-to-view" data-content="Click to view photos" style="cursor: pointer;" onclick="showImage(event)">
+            <img src="nightbeach/001-Enhanced-NR.jpg" class="card-img-top" alt="Wesley&Haidee" style="object-fit: cover; height: 25rem;" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-title">Night Beach</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h1>Night Beach</h1>
+        <p class="lazercattext"> A take on photographing a sexy, whimsical, stranded type girl on a beach at night, during a big rain storm.  </p>
+      </div>
+
+
+
+    </div>
+  </div>
+  
+  
+
+  <script>
+    const images = [
+      "BREMEN/Bremen_dinner.jpg",
+      "BREMEN/IMG-20230409-WA0067.jpg",
+      "BREMEN/IMG-20230409-WA0068.jpg",
+      "BREMEN/IMG-20230409-WA0069.jpg",
+      "BREMEN/IMG-20230409-WA0071.jpg",
+      "BREMEN/IMG-20230409-WA0072.jpg",
+      "BREMEN/IMG-20230409-WA0073.jpg",
+      "BREMEN/IMG-20230409-WA0075.jpg",
+      "BREMEN/IMG-20230409-WA0076.jpg",
+      "BREMEN/IMG-20230409-WA0077.jpg",
+      "BREMEN/IMG-20230409-WA0078.jpg",
+      "BREMEN/IMG-20230409-WA0079.jpg",
+      "BREMEN/IMG-20230409-WA0080.jpg",
+      "BREMEN/IMG-20230409-WA0081.jpg",
+      "BREMEN/IMG-20230409-WA0084.jpg",
+      "BREMEN/IMG-20230409-WA0085.jpg"
+    ];
+  
+    const secondCardImages = [
+      "wesleyI/DSCF2708-1.jpg",
+      "wesleyI/DSCF2871-1.jpg",
+      "wesleyI/DSCF2879-1.jpg",
+      "wesleyI/DSCF2912-1.jpg",
+      "wesleyI/DSCF2940.jpg",
+      "wesleyI/DSCF2966.jpg",
+      "wesleyI/DSCF3020_1.jpg",
+      "wesleyI/DSCF3037_1.jpg",
+      "wesleyI/DSCF3137-1.jpg",
+    ];
+
+    const thirdCardImages = [
+      "wesleyHaidee/434.jpg",
+     "wesleyHaidee/090.jpg",
+        "wesleyHaidee/115.jpg",
+        "wesleyHaidee/122.jpg",
+        "wesleyHaidee/169.jpg",
+        "wesleyHaidee/170.jpg",
+        "wesleyHaidee/220.jpg",
+        "wesleyHaidee/222.jpg",
+        "wesleyHaidee/246.jpg",
+        "wesleyHaidee/271.jpg",
+        "wesleyHaidee/272.jpg",
+        "wesleyHaidee/277.jpg",
+        "wesleyHaidee/283.jpg",
+        "wesleyHaidee/295.jpg",
+        "wesleyHaidee/332.jpg",
+        "wesleyHaidee/361.jpg"
+    
+    ];
+
+    const fourthCardImages = [
+          "nightbeach/001-Enhanced-NR.jpg",
+    "nightbeach/006-Enhanced-NR.jpg",
+    "nightbeach/116-Enhanced-NR-1.jpg",
+    "nightbeach/178.jpg",
+    "nightbeach/201.jpg",
+    "nightbeach/204.jpg",
+    "nightbeach/221-Enhanced-NR.jpg",
+    "nightbeach/222-Enhanced-NR.jpg",
+    "nightbeach/223-Enhanced-NR.jpg",
+    "nightbeach/225.jpg",
+    "nightbeach/268.jpg",
+    "nightbeach/271.jpg",
+    "nightbeach/286.jpg",
+    "nightbeach/287.jpg"
+
+    ];
+  
+    let firstCardIndex = 0;
+    let secondCardIndex = 0;
+    let thirdCardIndex = 0;
+    let fourthCardIndex = 0;
+    let activeCardIndex = -1; // To track which card is active
+  
+    function showImage(event) {
+      event.stopPropagation();
+      const clickedElement = event.target;
+      const cardIndex = parseInt(clickedElement.closest('.card').dataset.cardIndex);
+      
+      activeCardIndex = cardIndex;
+      if (cardIndex === 0) {
+        document.getElementById("overlayImage").src = images[firstCardIndex];
+      } else if (cardIndex === 1) {
+        document.getElementById("overlayImage").src = secondCardImages[secondCardIndex];
+      } else if (cardIndex === 2) {
+        document.getElementById("overlayImage").src = thirdCardImages[thirdCardIndex];
+      } else if (cardIndex === 3) {
+        document.getElementById("overlayImage").src = fourthCardImages[fourthCardIndex];
+      }
+      document.getElementById("overlay").style.display = "flex"; // Changed from block to flex for proper alignment
+      activateCard(cardIndex);
+    }
+
+    function activateCard(cardIndex) {
+      const previousActiveCard = document.querySelector(".card.active");
+      if (previousActiveCard) {
+        previousActiveCard.classList.remove("active");
+      }
+      const cardSelector = `.card[data-card-index="${cardIndex}"]`;
+      document.querySelector(cardSelector).classList.add("active");
+    }
+
+    function off() {
+      document.getElementById("overlay").style.display = "none";
+    }
+
+    function prevImage(event) {
+      event.stopPropagation();
+      if (activeCardIndex === 0) {
+        firstCardIndex = (firstCardIndex > 0) ? firstCardIndex - 1 : images.length - 1;
+        document.getElementById("overlayImage").src = images[firstCardIndex];
+      } else if (activeCardIndex === 1) {
+        secondCardIndex = (secondCardIndex > 0) ? secondCardIndex - 1 : secondCardImages.length - 1;
+        document.getElementById("overlayImage").src = secondCardImages[secondCardIndex];
+      } else if (activeCardIndex === 2) {
+        thirdCardIndex = (thirdCardIndex > 0) ? thirdCardIndex - 1 : thirdCardImages.length - 1;
+        document.getElementById("overlayImage").src = thirdCardImages[thirdCardIndex];
+      } else if (activeCardIndex === 3) {
+        fourthCardIndex = (fourthCardIndex > 0) ? fourthCardIndex - 1 : fourthCardImages.length - 1;
+        document.getElementById("overlayImage").src = fourthCardImages[fourthCardIndex];
+      }
+    }
+
+    function nextImage(event) {
+      event.stopPropagation();
+      if (activeCardIndex === 0) {
+        firstCardIndex = (firstCardIndex < images.length - 1) ? firstCardIndex + 1 : 0;
+        document.getElementById("overlayImage").src = images[firstCardIndex];
+      } else if (activeCardIndex === 1) {
+        secondCardIndex = (secondCardIndex < secondCardImages.length - 1) ? secondCardIndex + 1 : 0;
+        document.getElementById("overlayImage").src = secondCardImages[secondCardIndex];
+      } else if (activeCardIndex === 2) {
+        thirdCardIndex = (thirdCardIndex < thirdCardImages.length - 1) ? thirdCardIndex + 1 : 0;
+        document.getElementById("overlayImage").src = thirdCardImages[thirdCardIndex];
+      } else if (activeCardIndex === 3) {
+        fourthCardIndex = (fourthCardIndex < fourthCardImages.length - 1) ? fourthCardIndex + 1 : 0;
+        document.getElementById("overlayImage").src = fourthCardImages[fourthCardIndex];
+      }
+    }
+
+  </script>
+
+</main>
+</body>
+</html>

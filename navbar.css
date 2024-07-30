@@ -1,0 +1,67 @@
+.nav-link {
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.fs-2 {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  font-weight: bold;
+
+}
+
+.nav-link[href="Animation.html"] {
+  color: rgb(255, 255, 255); /* Tomato */
+  text-decoration: solid;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.nav-link[href="Photography.html"] {
+  color: rgb(255, 255, 255); /* Tomato */
+  text-decoration: solid;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.nav-link[href="Programming.html"] {
+  color: rgb(255, 255, 255); /* Tomato */
+  text-decoration: solid;
+  font-weight: bold;
+  margin-top: 10px;
+
+}
+
+.nav-link[href="illustration.html"] {
+  color: rgb(255, 255, 255); /* Tomato */
+  text-decoration: solid;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.nav-link[href="Video.html"] {
+  color: rgb(255, 255, 255); /* Tomato */
+  text-decoration: solid;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.nav-link[href="WRITING.html"] {
+  color: rgb(255, 255, 255); /* Tomato */
+  text-decoration: solid;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+/* Hover effects */
+.nav-link:hover {
+  color: blue;
+  opacity: 0.7;
+  transition: opacity 0.8s;
+}

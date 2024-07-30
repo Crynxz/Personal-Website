@@ -1,0 +1,97 @@
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <title> JOÃO SOUSA WEBSITE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ 
+  <link rel="stylesheet" type="text/css"href="writing.css">
+  <link rel="stylesheet" type="text/css"href="portfolio.css">
+  <link rel="stylesheet" type="text/css"href="animation.css">
+  <link rel="stylesheet" type="text/css"href="navbar.css">
+
+    <script src="writing.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+  <main>
+    <div class = "container" >
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="index.html"  class="logo-link">
+          <span class="fs-2">JS</span>
+        </a>
+ 
+  
+        <ul class="nav nav-pills  ms-auto" > 
+        
+          <li class ="nav-item">
+            <a href="Animation.html" class="nav-link">Animation</a> 
+          </li>
+  
+          <li class ="nav-item">
+            <a href="Photography.html" class="nav-link">Photography</a> 
+          </li>
+  
+          <li class ="nav-item">
+            <a href="Programming.html" class="nav-link">Programming</a> 
+          </li>
+  
+          <li class ="nav-item">
+            <a href="illustration.html" class="nav-link">Illustration</a> 
+          </li>
+  
+          <li class ="nav-item">
+            <a href="Video.html" class="nav-link">Directing/Acting</a> 
+          </li>
+  
+          <li class ="nav-item">
+            <a href="WRITING.html" class="nav-link">Writing</a> 
+          </li>
+        </ul>
+      </header>
+    </div>
+
+    <section class="WRITING-section">
+
+      <div class="Header-writing">
+        <h1 class="TitleWriting"> WRITING </h1>
+      </div>
+
+      <div class="Introduction-writing">
+        <p class="intro-text"> On this page, I showcase a selection of poems I've written along with various other text snippets.</p>
+
+      </div>
+
+      <div class="Header-writing">
+        <h1 class="PoemTitle"> POEMS </h1>
+      </div>
+
+      <div class="poems-list">
+        <a class="Open-poem-link" href="#" onclick="openOverlay('poems/RIVER_poem.pdf')">Open "River" poem</a>
+        <a class="Open-poem-link" href="#" onclick="openOverlay('poems/Tears.pdf')">Open "Tears" poem</a>
+        <a class="Open-poem-link" href="#" onclick="openOverlay('poems/DESEJO.pdf')">Open "Desejo" poem</a>
+        <a class="Open-poem-link" href="#" onclick="openOverlay('poems/Stones.pdf')">Open "Stones" poem</a>
+      </div>
+    </section>
+  
+          </div>
+    </section>
+
+
+     <!-- Overlay -->
+  <div id="pdfOverlay" class="overlay">
+    <div class="overlay-content">
+      <span class="close-btn" onclick="closeOverlay()">&times;</span>
+      <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  </main>
+</body>
+</html>

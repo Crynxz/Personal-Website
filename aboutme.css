@@ -1,0 +1,70 @@
+.AboutmeLAYOUTrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.About_meImg-Container {
+  flex: 0 0 50%;
+  max-width: 20%;
+  min-width: 30%;
+  height: 800px; /* Adjust as needed */
+}
+
+.aboutmeImg {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  padding-left:3%;
+}
+
+.About_meTEXT_CONTAINER {
+  flex: 0 0 50%;
+  max-width: 40%;
+  min-width: 70%;
+  min-height: 564px;
+  text-align: left;
+}
+
+.About_meTEXT_CONTAINER_Layout {
+  padding: 20px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  flex: 1;
+  max-width: 150%;
+  transition-duration: inherit;
+}
+
+.About_meTEXT_1 {
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 0;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+
+  font-family: Montserrat, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .About_meTEXT_1 {
+    font-size: 1rem; /* Adjust size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .About_meTEXT_1 {
+    font-size: 0.8rem; /* Adjust size for even smaller screens */
+  }
+}
+
+.aboutme-header{
+  margin-bottom: 1em;
+}
+

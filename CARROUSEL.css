@@ -1,0 +1,165 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+body.smooth-bg-transition {
+  transition: background-color 1.5s ease;
+  background-color: linear-gradient(to bottom, #00008b, #000033);
+}
+
+body.active {
+  background-color: #00008b;
+}
+
+body.third-active {
+  transition: background-color 0.7s ease-in-out; /* Third transition properties */
+  background-color: color3; /* Set initial color for third transition (optional) */
+}
+
+body:hover {
+  background-color: rgba(0, 6, 76, 0.5);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.frame {
+  position: relative; /* Change to relative */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.13);
+  overflow: hidden;
+  color: #fff;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.frame .frame-bg {
+  display: flex;
+  top: -50%;
+  background-repeat: no-repeat; /* Prevent tiling if image is smaller */
+  background-position: center; /* Center the image horizontally */
+  max-width: 100%;
+  height: 300%;
+  background-position: center;
+  mix-blend-mode: multiply; /* Use multiply blend mode */
+  background-size: cover;
+}
+
+.background-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: blue; /* Set your desired background color */
+  opacity: 0.5; /* Adjust the opacity as needed */
+  z-index: 1; /* Place the overlay above the image */
+}
+
+.welcomeContainer {
+  position: absolute;
+  top: 50%; /* Vertically center the section */
+  left: 10%; /* Move container 20% from the left edge */
+  transform: translateY(-200%); /* Adjust for vertical centering */
+  text-align: center; /* Text remains centered within the container */
+  color: #fff; /* Text color */
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+.welcome { /* Styles for "WELCOME" text */
+  font-size: 5rem; /* Base font size for WELCOME text */
+  line-height: 1.2; /* Adjust line height for better spacing */
+}
+
+.welcometext, .welcometext2 { /* Styles for other text */
+  font-size: 1.2rem; /* Base font size for other text */
+}
+
+@media (max-width: 500px) {
+  .welcomeContainer { /* Adjust left position for smaller screens (optional) */
+    left: 10%; /* Adjust for desired positioning on mobile */
+  }
+  .welcome { /* Responsive font size for WELCOME text */
+    font-size: calc(8vw + 40px); /* Adjust calculation for desired size */
+  }
+  .welcometext, .welcometext2 { /* Smaller font size for other text on mobile */
+    font-size: 1rem;
+  }
+}
+.pre-outer {
+  display: flex; /* Use flexbox */
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  right: 0;
+  transform: translateY(-200%); /* Vertically center the carousel */
+}
+
+.carousel {
+  font-size: calc(2vw + 2rem); /* Use viewport units for font size */
+  line-height: 1.5; /* Set line-height as a multiplier of font-size */
+}
+.carousel .pre {
+  margin-right: 10px; /* Adjust the value for desired spacing */
+  right: calc(50% - (2vw + 2rem) / 2); /* Center text based on font size */
+  height: 1.5em; /* Use em unit for element height */
+  text-shadow: 2px 2px 2px #e67e22;
+  flex: 0 0 auto; /* Prevent shrinking/growing, maintain width */
+  position: relative;
+  top: 0; /* Align to top */
+  left: calc(50% - (2vw + 2rem) / 2); /* Adjust left position based on viewport and font size */
+}
+.carousel .change_outer {
+  position: relative;
+  top: 0;
+  left: calc(50% - (2vw + 2rem) / 2); /* Center text based on font size */
+  text-align: left;
+  height: 1.5em;
+  overflow: hidden;
+  flex: 1; /* Allow to grow and fill remaining space */
+  flex-grow: 1; /* Allow horizontal growth */
+}
+.carousel .change_outer .change_inner {
+  position: relative;
+  animation: rotate 8s ease-in-out infinite;
+}
+.carousel .change_outer .element {
+  display: block;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px #e67e22;
+}
+
+@keyframes rotate {
+  0%, 10% {
+    transform: translateY(0);
+  }
+  15%, 25% {
+    transform: translateY(-1.5em); /* Use em unit for animation */
+  }
+  30%, 40% {
+    transform: translateY(-3em); /* Use em unit for animation */
+  }
+  45%, 55% {
+    transform: translateY(-4.5em); /* Use em unit for animation */
+  }
+  60%, 70% {
+    transform: translateY(-6em); /* Use em unit for animation */
+  }
+  75%, 85% {
+    transform: translateY(-7.5em); /* Use em unit for animation */
+  }
+  90%, 100% {
+    transform: translateY(0); /* Smooth transition back to first element */
+  }
+}/*# sourceMappingURL=CARROUSEL.css.map */
