@@ -1,6 +1,6 @@
 window.addEventListener('scroll', () => {
   const scrollPosition1 = window.scrollY;
-  const triggerPosition1 = 900;  // First transition trigger point
+  const triggerPosition1 = 901;  // First transition trigger point
   const triggerPosition2 = 1800; // Second transition trigger point
 
   // Define background colors for each transition
