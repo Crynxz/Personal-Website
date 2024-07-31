@@ -256,7 +256,7 @@
                 <div id="form-message-success" class="mb-4">
                   Your message was sent, thank you!
                 </div>
-                <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                <form method="POST" id="contactForm" name="contactForm" class="contactForm" action="send_email.php">
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
@@ -322,7 +322,8 @@
                     <i class="fa-brands fa-instagram"></i>
                   </div>
                   <div class="text pl-3">
-                    <p><span>Instagram:</span> <a href="#">https://www.instagram.com/joao.sousa0_/</a></p>
+                    <p><span>Instagram:</span> <a href="https://www.instagram.com/joao.sousa0_/" target="_blank">https://www.instagram.com/joao.sousa0_/</a></p>
+
                   </div>
                 </div>
               </div>
@@ -341,6 +342,28 @@
 </main>
 
 </body>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    let valid = true;
+    let fields = ['name', 'email', 'subject', 'message'];
+  
+    fields.forEach(function(field) {
+      let input = document.getElementById(field);
+      if (input.value.trim() === '') {
+        valid = false;
+        input.classList.add('is-invalid');
+      } else {
+        input.classList.remove('is-invalid');
+      }
+    });
+  
+    if (!valid) {
+      event.preventDefault();
+      document.getElementById('form-message-warning').innerText = 'Please fill out all fields.';
+    }
+  });
+  </script>
 
 
 
