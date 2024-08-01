@@ -1,11 +1,12 @@
-
-
-
 .PortfolioTITLE{
   font-weight: bold;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
   margin-bottom: 5rem; /* Adjust the value as needed */
+}
+
+.portfolio-title{
+  font-size: 16rem;
 }
 
 .image {
@@ -41,7 +42,7 @@
   bottom:0;
   padding:4px 10px;
   text-align:center;
-    box-sizing:border-box;
+  box-sizing:border-box;
   -moz-box-sizing:border-box;
 }
 .image:hover:after, .image:hover:before {
@@ -54,6 +55,62 @@
 
 .row {
   row-gap: 2rem; /* Adjust the value as needed */
-  margin-bottom:10rem; /* Adjust the value as needed */
+
+  width: 100%;
+  margin: 50px auto; /* Center the row within the container */
 } 
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .PortfolioTITLE {
+    font-size: 1.5rem; /* Smaller font size */
+    margin-bottom: 3rem; /* Adjust spacing for smaller screens */
+  }
+
+  .portfolio-title{
+    font-size: 5rem;
+  }
+
+  .image:before {
+    font-size: 18px; /* Smaller font size for the overlay text */
+  }
+
+  .row {
+    row-gap: 1.5rem; /* Adjust gap for smaller screens */
+    margin-bottom: 5rem; /* Adjust spacing for smaller screens */
+    padding-left: 15px;
+    padding-right: 15px; /* Ensure padding within viewport */
+  }
+
+  .card {
+    width: calc(100% - 30px); /* Make the cards responsive */
+    max-width: 25rem; /* Ensure they don't exceed the original max width */
+    margin-left: auto;
+    margin-right: auto; /* Center the cards */
+  }
+}
+
+@media (max-width: 480px) {
+  .PortfolioTITLE {
+    font-size: 1.2rem; /* Even smaller font size for very small screens */
+    margin-bottom: 2rem; /* Further adjust spacing */
+  }
+
+  .image:before {
+    font-size: 16px; /* Even smaller font size for overlay text */
+  }
+
+  .row {
+    row-gap: 1rem; /* Adjust gap for very small screens */
+    margin-bottom: 3rem; /* Further adjust spacing */
+    padding-left: 10px;
+    padding-right: 10px; /* Ensure padding within viewport */
+  }
+
+  .card {
+    width: calc(100% - 20px); /* Ensure cards are 100% width on very small screens */
+    max-width: 25rem; /* Ensure they don't exceed the original max width */
+    margin-left: auto;
+    margin-right: auto; /* Center the cards */
+  }
+}

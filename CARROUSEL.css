@@ -23,6 +23,7 @@ html, body {
   height: 100%;
 }
 
+
 .frame {
   position: relative; /* Change to relative */
   display: flex;
@@ -83,25 +84,49 @@ html, body {
   font-size: 1.2rem; /* Base font size for other text */
 }
 
-@media (max-width: 500px) {
-  .welcomeContainer { /* Adjust left position for smaller screens (optional) */
-    left: 10%; /* Adjust for desired positioning on mobile */
+@media (max-width: 768px) {
+  .welcomeContainer {
+    left: 5%; /* Adjust for desired positioning on tablets */
   }
-  .welcome { /* Responsive font size for WELCOME text */
-    font-size: calc(8vw + 40px); /* Adjust calculation for desired size */
+  .welcome {
+    font-size: calc(6vw + 30px); /* Adjust calculation for desired size on tablets */
   }
-  .welcometext, .welcometext2 { /* Smaller font size for other text on mobile */
-    font-size: 1rem;
+  .welcometext, .welcometext2 {
+    font-size: 1rem; /* Smaller font size for other text on tablets */
   }
 }
+
+@media (max-width: 500px) {
+  .frame {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    justify-content: flex-start; /* Align items to the start of the container */
+  }
+
+  .welcomeContainer {
+    top: 20%; /* Adjust top position for better spacing on mobile */
+    left: 5%; /* Adjust for desired positioning on mobile */
+    transform: translateY(0); /* Remove transform to simplify positioning on mobile */
+  }
+  
+  .welcome {
+    font-size: calc(8vw + 40px); /* Adjust calculation for desired size on mobile */
+  }
+  
+  .welcometext, .welcometext2 {
+    font-size: 1rem; /* Smaller font size for other text on mobile */
+  }
+  
+
+}
+
 .pre-outer {
   display: flex; /* Use flexbox */
 }
 
 .center {
   position: absolute;
-  top: 50%;
-  left: 40%;
+  top: 80%;
+  left: 30%;
   right: 0;
   transform: translateY(-200%); /* Vertically center the carousel */
 }
@@ -114,11 +139,12 @@ html, body {
   margin-right: 10px; /* Adjust the value for desired spacing */
   right: calc(50% - (2vw + 2rem) / 2); /* Center text based on font size */
   height: 1.5em; /* Use em unit for element height */
-  text-shadow: 2px 2px 2px #e67e22;
+  text-shadow: 2px 2px 2px #140043;
   flex: 0 0 auto; /* Prevent shrinking/growing, maintain width */
   position: relative;
   top: 0; /* Align to top */
   left: calc(50% - (2vw + 2rem) / 2); /* Adjust left position based on viewport and font size */
+  display: inline; /* Make sure it's inline with the changing elements */
 }
 .carousel .change_outer {
   position: relative;
@@ -137,8 +163,9 @@ html, body {
 .carousel .change_outer .element {
   display: block;
   font-weight: 700;
-  text-shadow: 2px 2px 2px #e67e22;
+  text-shadow: 2px 2px 2px #14004c;
 }
+
 
 @keyframes rotate {
   0%, 10% {
@@ -161,6 +188,97 @@ html, body {
   }
   90%, 100% {
     transform: translateY(0); /* Smooth transition back to first element */
+  }
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+
+  .center{
+    position: absolute;
+    top: 85%;
+      transform: translateY(-100%); /* Vertically center the carousel */
+    transform: translateX(-55%); /* Vertically center the carousel */
+  }
+
+  .carousel {
+    font-size: calc(3vw + 1rem); /* Adjust font size for smaller screens */
+  }
+
+  .carousel .pre {
+    margin-right: 20px; /* Adjust spacing for smaller screens */
+    left: calc(50% - (2vw + 1rem) / 2); /* Adjust left position based on new font size */
+  }
+
+  .carousel .change_outer {
+    height: 1.5em; /* Adjust height for smaller screens */
+  }
+
+  .carousel .change_outer .change_inner {
+    animation: rotate-mobile 10s ease-in-out infinite; /* Adjust animation duration for smaller screens */
+  }
+}
+
+/* Keyframes for rotation on mobile */
+@keyframes rotate-mobile {
+  0%, 10% {
+    transform: translateY(0);
+  }
+  15%, 25% {
+    transform: translateY(-1.5em); /* Adjust translateY for new font size */
+  }
+  30%, 40% {
+    transform: translateY(-3em); /* Adjust translateY for new font size */
+  }
+  45%, 55% {
+    transform: translateY(-4.5em); /* Adjust translateY for new font size */
+  }
+  60%, 70% {
+    transform: translateY(-6em); /* Adjust translateY for new font size */
+  }
+  75%, 85% {
+    transform: translateY(-7.5em); /* Adjust translateY for new font size */
+  }
+  90%, 100% {
+    transform: translateY(0); /* Smooth transition back to first element */
+  }
+}
+
+
+/* Portfolio Title Responsive Styles */
+.portfolio-title {
+  font-size: 18em; /* Default font size for large screens */
+  margin-top: 1em;
+}
+
+@media (max-width: 1200px) {
+  .portfolio-title {
+    font-size: 15em; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .portfolio-title {
+    font-size: 12em; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-title {
+    font-size: 9em; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-title {
+    font-size: 6em; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .portfolio-title {
+    font-size: 4em; /* Adjust font size for smaller screens */
   }
 }
 

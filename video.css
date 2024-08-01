@@ -1,0 +1,193 @@
+/* Add this CSS to your existing stylesheet */
+
+/* Ensure the video container is responsive */
+
+
+.Showreel-section {
+  margin-bottom: 10rem; /* Adjust this value to control the bottom margin */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .Showreel-section {
+    margin-bottom: 2rem; /* Reduce bottom margin for tablets and smaller devices */
+  }
+}
+
+@media (max-width: 576px) {
+  .Showreel-section {
+    margin-bottom: 1rem; /* Further reduce bottom margin for mobile devices */
+  }
+}
+
+.video-container {
+  width: 100%;
+  max-width: 700px; /* Set a maximum width for larger screens */
+  padding: 0 15px; /* Add padding for better spacing */
+  box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+.large-video {
+  max-width: 1200px; /* Set a maximum width for larger screens */
+}
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.D2-section {
+  margin-top: 5rem; /* Adjust top margin if needed */
+}
+
+.D2-section h1 {
+  font-size: calc(1.5rem + 1vw); /* Responsive font size */
+}
+
+
+.embed-responsive::before {
+  display: block;
+  content: "";
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.embed-responsive-16by9 {
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.embed-responsive .embed-responsive-item,
+.embed-responsive embed,
+.embed-responsive iframe,
+.embed-responsive object,
+.embed-responsive video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.animation-page {
+  padding: 15px;
+}
+
+.Showreel-title h1, .D2-section h1 {
+  font-size: calc(3.5rem + 1vw); /* Responsive font size */
+}
+
+
+.lazercattext {
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .D2-section {
+    margin-top: 2rem; /* Increase margin top for better spacing */
+  }
+
+  .video-container {
+    padding: 0; /* Remove padding for better fit */
+  }
+
+  .embed-responsive::before {
+    padding-top: 0; /* Remove fixed aspect ratio padding on smaller screens */
+  }
+
+  .embed-responsive video {
+    width: 100%;
+    height: auto; /* Allow height to adjust automatically */
+  }
+
+  .list-group-item {
+    font-size: 0.9rem; /* Slightly smaller font size on tablets and smaller */
+    padding: 0.6rem 1rem; /* Reduced padding */
+  }
+
+  .D2-section h1 {
+    font-size: 1.75rem; /* Increase font size on smaller screens */
+  }
+
+  .lazercattext {
+    font-size: 2rem; /* Slightly smaller font size on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 768px) {
+  .D2-section .row {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+  }
+
+  .D2-section .col-md-6, .D2-section .col-lg-5 {
+    flex: 0 0 50%; /* Each column takes up 50% of the width */
+    max-width: 50%; /* Set max-width for columns */
+  }
+
+  .D2-section .col-md-6.col-lg-5 {
+    margin-right: 1rem; /* Add space between columns */
+  }
+}
+
+/* Responsive adjustments for tablets and smaller screens */
+@media (max-width: 768px) {
+  .D2-section .row {
+    display: block; /* Stack columns on smaller screens */
+    text-align: center; /* Center text and video */
+  }
+
+  .D2-section .col-md-6, .D2-section .col-lg-5 {
+    max-width: 100%; /* Full width on smaller screens */
+    margin: 0 auto; /* Center columns */
+  }
+
+  .D2-section .col-md-6 {
+    margin-bottom: 1rem; /* Space below the video */
+  }
+
+  .D2-section .col-md-6:nth-of-type(2) {
+    margin-top: 1rem; /* Space above the text */
+  }
+}
+
+  
+  .video-container {
+    padding: 0; /* Remove padding for better fit */
+  }
+
+ 
+
+  .embed-responsive {
+    height: auto; /* Adjust height to auto for better scaling */
+  }
+
+
+  .embed-responsive video {
+    width: 100%;
+    height: auto; /* Ensure video scales properly */
+  }
+
+  .list-group-item {
+    font-size: 0.8rem; /* Smaller font size for mobile */
+    padding: 0.5rem 0.75rem; /* Further reduce padding for mobile */
+  }
+
+  .D2-section h1 {
+    font-size: 2rem; /* Further increase font size on very small screens */
+  }
+
+  .lazercattext {
+    font-size: 1rem; /* Slightly smaller font size on very small screens */
+  }
+}
+

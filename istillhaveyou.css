@@ -1,54 +1,76 @@
-
-.body{
+/* General Styles */
+.body {
   background-color: #1c090c;
-
 }
-
 
 .istillhaveyou-section {
-  /* Center the image horizontally */
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Hide any overflowing part of the background image */
+}
+
+.istillhaveyou-bg {
+  position: absolute;
+  top: 0;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  height: 100%; /* Full height */
+  width: auto; /* Auto width to maintain aspect ratio */
+  background-image: url("POSTER4.png");
+  background-size: cover; /* Ensure the image covers the container */
+  background-position: center center; /* Center the image */
+  background-repeat: no-repeat;
+}
+
+.text-section {
   text-align: center;
+  color: white;
+  padding: 100px 20px; /* Adjusted padding for better readability on smaller screens */
+  font-size: 1.5em; /* Adjusted font size for smaller screens */
 }
 
-
-
-
-
-.istillhaveyou-bg{
-  margin: 0; /* Remove default margins */
-  padding: 0; /* Remove default padding */
-  height: 100vh; /* Set height to 100% viewport height */
-
-  background-image: url("POSTER4.png"); /* Specify image URL */
-  background-size: cover;
-  background-position: center center; /* Center the image horizontally and vertically */
-  background-repeat: no-repeat; /* Prevent image repetition */
-
-}
-
-@media (max-width: 768px) {
-  .istillhaveyou-bg {
-    background-size: contain; /* Or background-size: auto; */
-    object-fit: contain; 
-  }
-}
-
-.text-section{
-  text-align: center;  /* Center the text horizontally */
-  color: white;        /* White text for contrast with dark background */
-  padding: 200px;       /* Add some padding for readability */
-  font-size: 2.5em; 
-}
-
-.credits{
-  margin-top: 50px;
+.credits {
+  margin-top: 30px; /* Reduced margin-top for better spacing on smaller screens */
 }
 
 .Download-report-link {
-  /* Style properties for the link */
-  color: blue; /* Example styling */
-  margin-top: 200px;
-  text-decoration: none; /* Remove underline */
-  padding: 10px 20px; /* Example styling */
-  border-radius: 5px; /* Example styling */
+  color: blue;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block; /* Ensure link is treated as a block for better spacing */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .istillhaveyou-bg {
+    width: 100%; /* Ensure the image width fits within the container */
+    background-size: contain; /* Fit the image within the container without cropping */
+    background-position: center center; /* Center the image */
+  }
+
+  .text-section {
+    padding: 50px 10px; /* Reduced padding for smaller screens */
+    font-size: 1.2em; /* Further reduced font size for smaller screens */
+  }
+
+  .credits {
+    margin-top: 20px; /* Reduced margin-top for better spacing on smaller screens */
+  }
+
+  .Download-report-link {
+    margin-top: 50px; /* Adjusted margin-top for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .text-section {
+    padding: 30px 10px; /* Further reduced padding for very small screens */
+    font-size: 1em; /* Further reduced font size for very small screens */
+  }
+
+  .credits {
+    margin-top: 15px; /* Reduced margin-top for very small screens */
+  }
 }
