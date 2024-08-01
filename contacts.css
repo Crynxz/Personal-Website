@@ -3,6 +3,8 @@
   box-sizing: border-box;
   text-align: center; /* Center-align text inside contact-section */
   margin-top: 200px;
+
+  margin-left: 30px;
 }
 
 .container {

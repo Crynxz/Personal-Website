@@ -1,116 +1,132 @@
-.PortfolioTITLE{
+/* General Styles for Portfolio Title */
+.PortfolioTITLE {
   font-weight: bold;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
   margin-bottom: 5rem; /* Adjust the value as needed */
 }
 
-.portfolio-title{
+.portfolio-title {
   font-size: 16rem;
 }
 
+/* General Styles for Image Overlay */
 .image {
-  position:relative;
-  width:100%;
-  height:100%;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
+
 .image img {
-  width:100%;
-  vertical-align:top;
+  width: 100%;
+  vertical-align: top;
 }
+
 .image:after, .image:before {
-  position:absolute;
-  opacity:0;
+  position: absolute;
+  opacity: 0;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
+
 .image:after {
-  content:'\A';
-  width:100%; height:100%;
-  top:0; left:0;
-  background:rgba(0,0,0,0.6);
+  content: '\A';
+  width: 100%; 
+  height: 100%;
+  top: 0; 
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
 }
+
 .image:before {
   content: attr(data-content);
-  width:100%;
-  color:#fff;
-  z-index:1;
+  width: 100%;
+  color: #fff;
+  z-index: 1;
   font-size: 25px;
   top: 50%; /* Center vertically */
   left: 50%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Center both horizontally and vertically */
-  bottom:0;
-  padding:4px 10px;
-  text-align:center;
-  box-sizing:border-box;
-  -moz-box-sizing:border-box;
-}
-.image:hover:after, .image:hover:before {
-  opacity:1;
+  bottom: 0;
+  padding: 4px 10px;
+  text-align: center;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
-.card-title{
+.image:hover:after, .image:hover:before {
+  opacity: 1;
+}
+
+.card-title {
   text-align: center;
 }
 
 .row {
   row-gap: 2rem; /* Adjust the value as needed */
-
   width: 100%;
-  margin: 50px auto; /* Center the row within the container */
-} 
+}
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* Adjust the card image size */
+.card-img-top {
+  height: 15rem;
+}
+
+/* Default layout for large screens */
+@media (min-width: 992px) {
+  .col-md-2 {
+    flex: 0 0 16.6667%; /* 1/6 of the container width */
+    max-width: 16.6667%;
+  }
+}
+
+/* Layout for medium screens */
+@media (max-width: 991.98px) and (min-width: 768px) {
+  .col-md-2 {
+    flex: 0 0 50%; /* 1/2 of the container width */
+    max-width: 50%;
+  }
+}
+
+/* Layout for small and extra small screens */
+@media (max-width: 767.98px) {
+  .row {
+    display: flex;
+    flex-wrap: wrap; /* Ensure items wrap */
+    margin-left: -0.5rem; /* Adjust spacing */
+    margin-right: -0.5rem;
+  }
+
+  .col-5, .col-md-2 {
+    flex: 0 0 50%; /* 1/2 of the container width for mobile screens */
+    max-width: 30%;
+    padding-left: 0.5rem; /* Adjust spacing */
+    padding-right: 0.5rem;
+  }
+
+  .card {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .card-img-top {
+    height: 8rem; /* Further reduced height for very small screens */
+  }
+  
   .PortfolioTITLE {
     font-size: 1.5rem; /* Smaller font size */
     margin-bottom: 3rem; /* Adjust spacing for smaller screens */
   }
 
-  .portfolio-title{
-    font-size: 5rem;
+  .portfolio-title {
+    font-size: 4rem;
   }
 
-  .image:before {
-    font-size: 18px; /* Smaller font size for the overlay text */
-  }
-
-  .row {
-    row-gap: 1.5rem; /* Adjust gap for smaller screens */
-    margin-bottom: 5rem; /* Adjust spacing for smaller screens */
-    padding-left: 15px;
-    padding-right: 15px; /* Ensure padding within viewport */
-  }
-
-  .card {
-    width: calc(100% - 30px); /* Make the cards responsive */
-    max-width: 25rem; /* Ensure they don't exceed the original max width */
-    margin-left: auto;
-    margin-right: auto; /* Center the cards */
+  .card-title{
+    font-size: 0.6rem;
   }
 }
 
-@media (max-width: 480px) {
-  .PortfolioTITLE {
-    font-size: 1.2rem; /* Even smaller font size for very small screens */
-    margin-bottom: 2rem; /* Further adjust spacing */
-  }
 
-  .image:before {
-    font-size: 16px; /* Even smaller font size for overlay text */
-  }
 
-  .row {
-    row-gap: 1rem; /* Adjust gap for very small screens */
-    margin-bottom: 3rem; /* Further adjust spacing */
-    padding-left: 10px;
-    padding-right: 10px; /* Ensure padding within viewport */
-  }
 
-  .card {
-    width: calc(100% - 20px); /* Ensure cards are 100% width on very small screens */
-    max-width: 25rem; /* Ensure they don't exceed the original max width */
-    margin-left: auto;
-    margin-right: auto; /* Center the cards */
-  }
-}
+
