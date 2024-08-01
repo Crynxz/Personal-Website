@@ -15,8 +15,9 @@
 .aboutmeImg {
   max-width: 100%;
   max-height: 100%;
-  height: auto;
-  padding-left:3%;
+  height: auto; /* Allow height to adjust automatically */
+  padding: 0 1em; /* Add padding for better spacing */
+  box-sizing: border-box; 
 }
 
 .About_meTEXT_CONTAINER {
@@ -52,19 +53,32 @@
   font-family: Montserrat, sans-serif;
 }
 
+/* Media query for tablets and small screens */
 @media (max-width: 768px) {
   .About_meTEXT_1 {
-    font-size: 1rem; /* Adjust size for smaller screens */
+    font-size: 1.2rem; /* Adjust font size for tablets */
+  }
+
+  .About_meImg-Container,
+  .About_meTEXT_CONTAINER {
+    flex: 1 1 100%; /* Stack elements vertically on small screens */
+    max-width: 100%;
+    min-width: 100%;
   }
 }
 
+/* Media query for mobile and extra small screens */
 @media (max-width: 480px) {
+  .About_meImg-Container {
+    flex: 1 1 100%; /* Ensure image takes full width */
+    max-width: 100%;
+    min-width: 100%;
+    height: 500px; /* Adjust height for smaller screens */
+  }
+
+ 
   .About_meTEXT_1 {
-    font-size: 0.8rem; /* Adjust size for even smaller screens */
+    font-size: 1rem; /* Adjust font size for mobile screens */
+    margin: 0.5em 0; /* Reduce margin for closer spacing */
   }
 }
-
-.aboutme-header{
-  margin-bottom: 1em;
-}
-
