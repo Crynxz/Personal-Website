@@ -40,7 +40,7 @@
       background-color: rgba(255, 255, 255, 0.7);
       color: black;
       text-align: center;
-      line-height: 50px;
+      line-height: 35px;
       font-size: 30px;
       cursor: pointer;
       z-index: 3;
@@ -178,11 +178,15 @@
     </header>
   </div>
 
+  
+
   <div id="overlay" onclick="off()">
     <span id="leftArrow" class="nav-arrow" onclick="prevImage(event)">&#9664;</span>
     <img id="overlayImage" src="" alt="Overlay Image" class="overlay-content">
     <span id="rightArrow" class="nav-arrow" onclick="nextImage(event)">&#9654;</span>
   </div>
+
+
 
   <div class="photography-page">
     <div class="gallery-section row">
@@ -398,7 +402,28 @@
       }
     }
 
+       // Swipe event handling
+       let touchStartX = 0;
+    let touchEndX = 0;
+
+    function handleGesture() {
+      if (touchEndX < touchStartX) nextImage(event);
+      if (touchEndX > touchStartX) prevImage(event);
+    }
+
+    document.getElementById("overlay").addEventListener("touchstart", function(event) {
+      touchStartX = event.changedTouches[0].screenX;
+    });
+
+    document.getElementById("overlay").addEventListener("touchend", function(event) {
+      touchEndX = event.changedTouches[0].screenX;
+      handleGesture();
+    });
+    
   </script>
+
+
+
 
 </main>
 </body>
