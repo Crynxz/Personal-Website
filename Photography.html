@@ -9,7 +9,6 @@
   <link rel="stylesheet" type="text/css" href="photography.css">
 
   <link rel="stylesheet" type="text/css"href="navbar.css">
-
   <style>
     #overlay {
       position: fixed;
@@ -22,7 +21,7 @@
       z-index: 2;
       cursor: pointer;
     }
-
+  
     #overlayContent {
       position: absolute;
       top: 50%;
@@ -31,7 +30,7 @@
       max-width: 90%;
       max-height: 90%;
     }
-
+  
     .nav-arrow {
       position: absolute;
       top: 50%;
@@ -40,99 +39,111 @@
       background-color: rgba(255, 255, 255, 0.7);
       color: black;
       text-align: center;
-      line-height: 35px;
+      line-height: 50px;
       font-size: 30px;
       cursor: pointer;
       z-index: 3;
+      border-radius: 50%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-
+  
+    .nav-arrow:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+  
     .photography-page{
       margin: 50px;
     }
-
+  
     #leftArrow {
       left: 10px;
       transform: translateY(-50%);
     }
-
+  
     #rightArrow {
       right: 10px;
       transform: translateY(-50%);
     }
-
+  
     .gallery-section img {
       width: 100%;
       height: auto;
     }
-
+  
     .card-body {
       padding: 1rem;
     }
-
+  
     .card {
       border: none;
       border-radius: 0.5rem;
     }
-
+  
     @media (max-width: 768px) {
       .gallery-section .card {
         margin-bottom: 1rem;
         width: 100%;
       }
-
+  
       .gallery-section h1 {
         font-size: 1.5rem;
       }
-
+  
       .lazercattext {
         font-size: 1rem;
       }
-
+  
       .nav-arrow {
         font-size: 24px;
         width: 40px;
         height: 40px;
       }
     }
-
+  
     @media (max-width: 576px) {
       .gallery-section h1 {
         font-size: 1.25rem;
       }
-
+  
       .lazercattext {
         font-size: 0.875rem;
       }
-
+  
       .nav-arrow {
         font-size: 20px;
         width: 35px;
         height: 35px;
       }
     }
-
+  
     @media (max-width: 400px) {
       .nav-arrow {
         font-size: 18px;
         width: 30px;
         height: 30px;
       }
-
+  
       .gallery-section h1 {
         font-size: 1.1rem;
       }
-
+  
       .lazercattext {
         font-size: 0.75rem;
       }
     }
-
+  
     .logo-link {
       font-size: 2rem;
       color: #fff;
       text-decoration: none;
     }
-
+  
     .behance-link {
       color: #0d6efd;
     }
@@ -253,6 +264,21 @@
         <p class="lazercattext"> A take on photographing a sexy, whimsical, stranded type girl on a beach at night, during a big rain storm.  </p>
       </div>
 
+      <div class="col-md-4">
+        <div class="card mx-auto" data-card-index="4">
+          <div class="image click-to-view" data-content="Click to view photos" style="cursor: pointer;" onclick="showImage(event)">
+            <img src="wesleyII/317_1.jpg" class="card-img-top" alt="WesleyII" style="object-fit: cover; height: 25rem;" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-title">Wesley II</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h1>Wesley II</h1>
+        <p class="lazercattext"> Wesley comes back, this time, as an ancient greek inspired enitity in contact with his inner feelings and nature.   </p>
+      </div>
+
 
 
     </div>
@@ -287,9 +313,10 @@
       "wesleyI/DSCF2912-1.jpg",
       "wesleyI/DSCF2940.jpg",
       "wesleyI/DSCF2966.jpg",
-      "wesleyI/DSCF3020_1.jpg",
+         "wesleyI/DSCF3020_1.jpg",
       "wesleyI/DSCF3037_1.jpg",
       "wesleyI/DSCF3137-1.jpg",
+      
     ];
 
     const thirdCardImages = [
@@ -325,8 +352,47 @@
     "nightbeach/225.jpg",
     "nightbeach/268.jpg",
     "nightbeach/271.jpg",
-    "nightbeach/286.jpg",
+   
     "nightbeach/287.jpg"
+
+    ];
+
+    const fifthCardImages = [
+         "wesleyII/012_1.jpg",
+         "wesleyII/060_1.jpg",
+  "wesleyII/062_1.jpg",
+"wesleyII/080_1.jpg",
+"wesleyII/107_1.jpg",
+"wesleyII/108_1.jpg",
+"wesleyII/114_1.jpg",
+"wesleyII/117_1.jpg",
+"wesleyII/133_1.jpg",
+"wesleyII/134_1.jpg",
+"wesleyII/151.jpg",
+"wesleyII/164.jpg",
+"wesleyII/195.jpg",
+"wesleyII/203.jpg",
+"wesleyII/213.jpg",
+"wesleyII/220_1.jpg",
+"wesleyII/221.jpg",
+"wesleyII/223.jpg",
+"wesleyII/234.jpg",
+"wesleyII/236.jpg",
+"wesleyII/244.jpg",
+"wesleyII/260.jpg",
+"wesleyII/271.jpg",
+"wesleyII/281.jpg",
+"wesleyII/297.jpg",
+"wesleyII/301.jpg",
+"wesleyII/305.jpg",
+"wesleyII/313.jpg",
+"wesleyII/315.jpg",
+"wesleyII/317_1.jpg",
+"wesleyII/321.jpg",
+"wesleyII/324.jpg",
+"wesleyII/327.jpg",
+"wesleyII/331.jpg",
+"wesleyII/333_1.jpg",
 
     ];
   
@@ -334,6 +400,7 @@
     let secondCardIndex = 0;
     let thirdCardIndex = 0;
     let fourthCardIndex = 0;
+    let fifthCardIndex = 0;
     let activeCardIndex = -1; // To track which card is active
   
     function showImage(event) {
@@ -350,6 +417,8 @@
         document.getElementById("overlayImage").src = thirdCardImages[thirdCardIndex];
       } else if (cardIndex === 3) {
         document.getElementById("overlayImage").src = fourthCardImages[fourthCardIndex];
+      } else if (cardIndex === 4) {
+        document.getElementById("overlayImage").src = fifthCardImages[fifthCardIndex];
       }
       document.getElementById("overlay").style.display = "flex"; // Changed from block to flex for proper alignment
       activateCard(cardIndex);
@@ -383,6 +452,10 @@
         fourthCardIndex = (fourthCardIndex > 0) ? fourthCardIndex - 1 : fourthCardImages.length - 1;
         document.getElementById("overlayImage").src = fourthCardImages[fourthCardIndex];
       }
+      else if (activeCardIndex === 4) {
+        fifthCardIndex = (fifthCardIndex > 0) ? fifthCardIndex - 1 : fifthCardImages.length - 1;
+        document.getElementById("overlayImage").src = fifthCardImages[fifthCardIndex];
+      }
     }
 
     function nextImage(event) {
@@ -400,6 +473,11 @@
         fourthCardIndex = (fourthCardIndex < fourthCardImages.length - 1) ? fourthCardIndex + 1 : 0;
         document.getElementById("overlayImage").src = fourthCardImages[fourthCardIndex];
       }
+      else if (activeCardIndex === 4) {
+        fifthCardIndex = (fifthCardIndex < fifthCardImages.length - 1) ? fifthCardIndex + 1 : 0;
+        document.getElementById("overlayImage").src = fifthCardImages[fifthCardIndex];
+      }
+      
     }
 
        // Swipe event handling
