@@ -1,14 +1,18 @@
 /* General Styles for Portfolio Title */
 .PortfolioTITLE {
-  font-weight: bold;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
   text-align: center;
   margin-bottom: 5rem; /* Adjust the value as needed */
 }
 
 .portfolio-title {
-  font-size: 16rem;
+  font-size: 10rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.PortfolioLayoutrow {
+  max-width: 100%; /* Ensure row does not exceed the viewport width */
+  margin: 0 auto; /* Center the row and prevent overflow */
 }
 
 /* General Styles for Image Overlay */
@@ -64,6 +68,10 @@
   font-family: 'Trispace', sans-serif; /* Apply Trispace font */
 }
 
+.CARDSLAYOUT{
+  justify-content: center;
+}
+
 /* Targeting the div with the data-content attribute */
 div[data-content="Take a look"] {
   font-family: 'Dela Gothic One', sans-serif;
@@ -117,11 +125,12 @@ div[data-content="Take a look"] {
   }
 
   .card {
-    width: 100%; /* Full width for smaller screens */
+    width: 110%; /* Full width for smaller screens */
   }
 
   .card-img-top {
-    height: 8rem; /* Further reduced height for very small screens */
+    height:10rem; /* Further reduced height for very small screens */
+
   }
   
   .PortfolioTITLE {
@@ -131,7 +140,7 @@ div[data-content="Take a look"] {
   }
 
   .portfolio-title {
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: 'Dela Gothic One', sans-serif;
   }
 
@@ -139,9 +148,11 @@ div[data-content="Take a look"] {
     font-size: 0.6rem;
    
   }
+
+  .CARDSLAYOUT{
+    justify-content: center;
+    padding-left: 20px;
+  }
 }
-
-
-
 
 
