@@ -15,7 +15,8 @@
   <link rel="stylesheet" type="text/css"href="navbar.css">
 
   
-
+  <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
   
 </head>
 
@@ -35,41 +36,41 @@
 
 
 <main>
-  <div class = "container" >
+  <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <a href="#" class="nav-link px-2 link-secondary disabled"> 
-         <span class="fs-4">JS</span>
-    </a>
-
-      <ul class="nav nav-pills  ms-auto" > 
-      
-        <li class ="nav-item">
-          <a href="Animation.html" class="nav-link">Animation</a> 
-        </li>
-
-        <li class ="nav-item">
-          <a href="Photography.html" class="nav-link">Photography</a> 
-        </li>
-
-        <li class ="nav-item">
-          <a href="Programming.html" class="nav-link">Programming</a> 
-        </li>
-
-        <li class ="nav-item">
-          <a href="illustration.html" class="nav-link">Illustration</a> 
-        </li>
-
-        <li class ="nav-item">
-          <a href="Directing_Acting.html" class="nav-link">Directing/Acting</a> 
-        </li>
-
-        <li class ="nav-item">
-          <a href="WRITING.html" class="nav-link">Writing</a> 
-        </li>
-      </ul>
+      <a href="#" class="nav-link px-2 link-secondary disabled">
+        <img class="jslogo" src="LogoJS_whiteee.png" alt="logo-image">
+      </a>
+  
+      <button class="navbar-toggler ms-auto d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse d-md-flex" id="navbarNavDropdown">
+        <ul class="nav nav-pills ms-auto">
+          <li class="nav-item">
+            <a href="Animation.html" class="nav-link">Animation</a>
+          </li>
+          <li class="nav-item">
+            <a href="Photography.html" class="nav-link">Photography</a>
+          </li>
+          <li class="nav-item">
+            <a href="Programming.html" class="nav-link">Programming</a>
+          </li>
+          <li class="nav-item">
+            <a href="illustration.html" class="nav-link">Illustration</a>
+          </li>
+          <li class="nav-item">
+            <a href="Directing_Acting.html" class="nav-link">Directing/Acting</a>
+          </li>
+          <li class="nav-item">
+            <a href="WRITING.html" class="nav-link">Writing</a>
+          </li>
+        </ul>
+      </div>
     </header>
   </div>
-
+  
 
 
 <div class="frame">
@@ -92,6 +93,7 @@
               <div class="element">a Photographer</div>
               <div class="element">a Programmer</div>
               <div class="element">a Writer</div> 
+              <div class="element">an Actor</div> 
             </div>
           </div>
       </div>
@@ -128,11 +130,11 @@
 
 
 
- <div class="portfolio-gradient" id="portfolio-section">
+<section class="portfolio-gradient" id="portfolio-section">
   <div class="PortfolioLayoutrow">
-    <div class="PortfolioTITLE">
-      <h1 class="portfolio-title">Portfolio</h1>
-    </div>
+    <header class="PortfolioTITLE">
+      <h1 class="portfolio-title">PORTFOLIO</h1>
+    </header>
 
     <div class="CARDSLAYOUT">
 
@@ -142,7 +144,7 @@
               <div class="card mx-auto">
                   <a href="Animation.html">
                     <div data-content="Take a look" class="image">
-                      <img src="Animation/6.webp" class="card-img-top" alt="..." style="object-fit: cover;">
+                      <img src="Animation/6.webp" class="card-img-top" alt="..." style="object-fit: cover;" loading="lazy">
                     </div>
                   </a>
 
@@ -156,7 +158,7 @@
               <div class="card mx-auto" >
                   <a href="illustration.html">
                     <div data-content="Take a look" class="image">
-                      <img src="Illustration/Bob rosssss.webp" class="card-img-top" alt="..." style="object-fit: cover; " >
+                      <img src="Illustration/Bob rosssss.webp" class="card-img-top" alt="..." style="object-fit: cover; " loading="lazy" >
                     </div>
                   </a>
                   
@@ -171,7 +173,7 @@
                 <div class="card mx-auto" >
                   <a href="Photography.html">
                   <div data-content="Take a look" class="image">
-                    <img src="phtography/434_1.webp" class="card-img-top" alt="..." style="object-fit: cover; ">
+                    <img src="phtography/434_1.webp" class="card-img-top" alt="..." style="object-fit: cover; " loading="lazy">
                   </div>
                   </a>
                   
@@ -190,12 +192,12 @@
             <div class="card mx-auto">
               <a href="Programming.html">
               <div data-content="Take a look" class="image">
-                <img src="PROGRAMMING/Screenshot 2024-07-05 024855.webp" class="card-img-top" alt="..." style="object-fit: cover; ">
+                <img src="PROGRAMMING/Screenshot 2024-07-05 024855.webp" class="card-img-top" alt="..." style="object-fit: cover; " loading="lazy">
               </div>
               </a>
 
                 <div class="card-body">
-                    <p class="card-title">PROGRAMMING (Videogames)</p>
+                    <p class="card-title">PROGRAMMING - Videogames</p>
                 </div>
             </div>
         </div>
@@ -204,7 +206,7 @@
                 <div class="card mx-auto" >
                   <a href="Directing_Acting.html">
                   <div data-content="Take a look" class="image">
-                    <img src="videography/videoclipgallowdance.webp" class="card-img-top" alt="..." style="object-fit: cover; " >
+                    <img src="videography/videoclipgallowdance.webp" class="card-img-top" alt="..." style="object-fit: cover; " loading="lazy" >
                   </div>
                   </a>
 
@@ -218,7 +220,7 @@
               <div class="card mx-auto" >
                 <a href="WRITING.html">
                 <div data-content="Take a look" class="image">
-                  <img src="Logo.webp" class="card-img-top" alt="..." style="object-fit: cover; " >
+                  <img src="Logo.webp" class="card-img-top" alt="..." style="object-fit: cover; "  loading="lazy"   >
                 </div>
                 </a>
                 
@@ -232,7 +234,7 @@
 
     </div>
   </div>
-</div>
+</section>
 
 
 
@@ -300,12 +302,7 @@
                 <h3>Contact information</h3>
                 <p class="mb-4">I am open for any suggestion, question or just to have a chat</p>
                 <div class="dbox w-100 d-flex align-items-start">
-                  <div class="icon d-flex align-items-center justify-content-center">
-                    <span class="fa fa-map-marker"></span>
-                  </div>
-                  <div class="text pl-3">
-                    <p><span>Address:</span> Rua Afonso Albuquerque, 192, Trofa, Porto </p>
-                  </div>
+                
                 </div>
                 <div class="dbox w-100 d-flex align-items-center">
                   <div class="icon d-flex align-items-center justify-content-center">

@@ -1,7 +1,3 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-}
 
 /* Container */
 .container {
@@ -24,11 +20,21 @@ body {
 .D2animation-title {
   text-align: center;
   margin: 20px 0;
+  font-family: 'Dela Gothic One', sans-serif; /* Apply Dela Gothic One font */
 }
 
 .D2animation-header {
   font-size: 10rem;
-  color: #4772ff;
+  color: #003cff;
+}
+
+
+.col-md-6 h1 {
+  font-family: 'Trispace', sans-serif; /* Apply Trispace font */
+  font-size: 2.5rem; /* Adjust font size */
+  font-weight: 700; /* Make the text bold */
+  color: #ffffff; /* Set text color */
+  line-height: 1.2; /* Adjust line height for better readability */
 }
 
 .D2-section {
@@ -37,6 +43,20 @@ body {
 
 .lazercattext {
   font-size: 2rem;
+  font-family: 'Trispace', sans-serif; /* Apply Trispace font */
+}
+
+.list-group-item {
+  font-family: 'Trispace', sans-serif; /* Apply Trispace font */
+  font-size: 1rem; /* Adjust font size */
+  color: #333; /* Set text color */
+  line-height: 1.5; /* Adjust line height for better readability */
+}
+
+/* Optionally, style the <strong> tags within the list items */
+.list-group-item strong {
+  font-weight: 700; /* Make the text bold */
+  color: #000; /* Adjust color if needed */
 }
 
 /* Video and Info */

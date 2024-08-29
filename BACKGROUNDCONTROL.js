@@ -1,26 +1,45 @@
-window.addEventListener('scroll', () => {
-  const scrollPosition1 = window.scrollY;
-  const triggerPosition1 = 901;  // First transition trigger point
-  const triggerPosition2 = 1800; // Second transition trigger point
+function throttle(func, limit) {
+  let lastFunc;
+  let lastRan;
+  return function() {
+    const context = this;
+    const args = arguments;
+    if (!lastRan) {
+      func.apply(context, args);
+      lastRan = Date.now();
+    } else {
+      clearTimeout(lastFunc);
+      lastFunc = setTimeout(function() {
+        if ((Date.now() - lastRan) >= limit) {
+          func.apply(context, args);
+          lastRan = Date.now();
+        }
+      }, limit - (Date.now() - lastRan));
+    }
+  }
+}
 
-  // Define background colors for each transition
+window.addEventListener('scroll', throttle(() => {
+  const scrollPosition1 = window.scrollY;
+  const triggerPosition1 = 901;
+  const triggerPosition2 = 1800;
+
   const color1 = 'linear-gradient(to bottom, #00008b, #000033)';
-  const color2 = '#00008b'; // Color after first transition
-  const color3 = '#000000'; // Color for the third transition
+  const color2 = '#00008b';
+  const color3 = '#000000';
 
   if (scrollPosition1 <= triggerPosition1) {
-    document.body.classList.remove('active', 'third-active'); // Reset classes
-    document.body.style.backgroundColor = color1; // Set background color directly for first part
+    document.body.classList.remove('active', 'third-active');
+    document.body.style.backgroundColor = color1;
   } else if (scrollPosition1 <= triggerPosition2) {
-    document.body.classList.add('active'); // First transition
-    document.body.classList.remove('third-active'); // Reset third transition
-    document.body.style.backgroundColor = ''; // Allow transition to take effect
+    document.body.classList.add('active');
+    document.body.classList.remove('third-active');
+    document.body.style.backgroundColor = '';
   } else {
-    document.body.classList.add('active', 'third-active'); // Apply both transitions
-    document.body.style.backgroundColor = color3; // Set background color directly for third part
+    document.body.classList.add('active', 'third-active');
+    document.body.style.backgroundColor = color3;
   }
-});
-
+}, 100)); // Limit to running every 100ms
 
 
 function goToPortfolio() {

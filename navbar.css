@@ -1,67 +1,78 @@
-.nav-link {
-  text-decoration: none;
-  padding: 10px 15px;
-  font-size: 1rem;
-}
-
 .logo-link {
   text-decoration: none;
+}
+
+.jslogo {
+  width: 4em; /* Larger logo size */
+  height: auto;
+  vertical-align: middle;
+}
+
+.navbar-header {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center text inside the link */
+  padding-left: 10px; /* Adjust spacing between the icon and text if needed */
+  padding-right: 10px; /* Adjust spacing between the text items */
+  text-align: center; /* Center text inside the link */
+}
+
+ul.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the list of links */
+  margin-bottom: 0; /* Align links with the center of the logo */
+  width: 100%; /* Ensure ul takes full width */
 }
 
 .fs-2 {
   color: rgb(255, 255, 255);
   font-size: 2rem;
   font-weight: bold;
-
 }
 
-.nav-link[href="Animation.html"] {
-  color: rgb(255, 255, 255); /* Tomato */
-  text-decoration: solid;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.nav-link[href="Photography.html"] {
-  color: rgb(255, 255, 255); /* Tomato */
-  text-decoration: solid;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.nav-link[href="Programming.html"] {
-  color: rgb(255, 255, 255); /* Tomato */
-  text-decoration: solid;
-  font-weight: bold;
-  margin-top: 10px;
-
-}
-
-.nav-link[href="illustration.html"] {
-  color: rgb(255, 255, 255); /* Tomato */
-  text-decoration: solid;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.nav-link[href="Directing_Acting.html"] {
-  color: rgb(255, 255, 255); /* Tomato */
-  text-decoration: solid;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
+/* Link Styling */
+.nav-link[href="Animation.html"],
+.nav-link[href="Photography.html"],
+.nav-link[href="Programming.html"],
+.nav-link[href="illustration.html"],
+.nav-link[href="Directing_Acting.html"],
 .nav-link[href="WRITING.html"] {
-  color: rgb(255, 255, 255); /* Tomato */
+  color: rgb(255, 255, 255);
   text-decoration: solid;
   font-weight: bold;
   margin-top: 10px;
+  font-family: 'Trispace', sans-serif;
+  text-align: center;
 }
 
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    width: 100%;
+  }
+ 
+  .navbar-toggler {
+    border: none;
+    display: block; /* Show toggler on mobile */
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+}
 
-/* Hover effects */
-.nav-link:hover {
-  color: blue;
-  opacity: 0.7;
-  transition: opacity 0.8s;
+/* Hide the navbar toggler on larger screens */
+@media (min-width: 769px) {
+  .navbar-toggler {
+    display: none; /* Hide toggler on desktop */
+  }
+  .navbar-collapse {
+    display: flex !important; /* Ensure navbar is always visible on desktop */
+  }
 }

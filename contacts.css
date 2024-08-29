@@ -5,6 +5,7 @@
   margin-top: 200px;
 
   margin-left: 30px;
+  padding-bottom: 100px;
 }
 
 .container {
@@ -36,6 +37,7 @@
   font-size: 10rem; /* Default font size for larger screens */
   text-align: center;
   color: #ffffff;
+  font-family: 'Dela Gothic One', sans-serif;
 }
 /* Media query for large screens */
 @media (min-width: 1200px) {
@@ -65,6 +67,30 @@
   .mb-4, .my-4 {
     margin-bottom: 1rem !important;
   }
+}
+
+/* Styling the .text */
+.dbox .text p {
+  margin: 0; /* Remove default margin */
+  font-size: 1rem; /* Adjust font size for the text */
+  line-height: 1.5; /* Adjust line height for better readability */
+  font-family: 'Trispace', sans-serif; 
+}
+
+.dbox .text p span {
+  font-weight: 700; /* Bold the label (e.g., "Phone:", "Email:") */
+}
+
+.dbox .text a {
+  font-size: 0.9rem; /* Adjust font size for the links */
+  color: #007bff; /* Set link color */
+  text-decoration: none; /* Remove underline from links */
+  font-family: 'Trispace', sans-serif; 
+  padding-left: 0.2rem;
+}
+
+.dbox .text a:hover {
+  text-decoration: underline; /* Optional: Add underline on hover */
 }
 
 /* Media query for extra small screens */
@@ -125,14 +151,20 @@
   .p-md-5 {
     padding: 3rem !important;
   }
+
+
+  
+
+
 }
 
 h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
   line-height: 1.5;
   font-weight: 400;
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: 'Trispace', sans-serif; /* Apply Trispace font */
   color: #ffffff;
 }
+
 
 .wrapper {
   width: 100%;
@@ -161,6 +193,7 @@ h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
 
 .mb-4, .my-4 {
   margin-bottom: 1.5rem !important;
+  font-family: 'Trispace', sans-serif; /* Apply Trispace font */
 }
 
 #form-message-warning {
@@ -239,8 +272,8 @@ textarea.form-control {
 }
 
 .btn.btn-primary {
-  background: #f39422 !important;
-  border-color: #f39422 !important;
+  background: blue !important;
+  border-color: blue !important;
   color: #fff;
 }
 
@@ -313,7 +346,7 @@ button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disab
   }
   
   .info-wrap .text {
-    font-size: 14px; /* Adjust font size for better readability on smaller screens */
+    font-size: 12px; /* Adjust font size for better readability on smaller screens */
   }
   
   .info-wrap .dbox a {
@@ -329,5 +362,35 @@ button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disab
   
   .info-wrap .dbox a {
     word-break: break-all; /* Ensure that links break properly if they are too long */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .dbox .text p {
+    font-size: 0.9rem; /* Smaller font size for tablets */
+  }
+
+  .dbox .text p span {
+    font-size: 1rem; /* Adjust label size for tablets */
+  }
+
+  .dbox .text a {
+    font-size: 0.8rem; /* Smaller font size for links on tablets */
+  }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 500px) {
+  .dbox .text p {
+    font-size: 0.8rem; /* Further reduce font size for mobile screens */
+  }
+
+  .dbox .text p span {
+    font-size: 0.9rem; /* Adjust label size for mobile screens */
+  }
+
+  .dbox .text a {
+    font-size: 0.7rem; /* Further reduce font size for links on mobile screens */
   }
 }
